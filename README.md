@@ -7,11 +7,11 @@
 ## Usage
 
 ~~~
-unsortedIntegers := []int{3,2,1}
+unsortedList := []int{3,2,1}
 sorter := &MergeSorter{}
-sortedIntegers := sorter.Sort(unsortedIntegers)
+sortedList := sorter.Sort(unsortedList)
 
-// sortedIntegers would be: [1, 2, 3]
+// sortedList would be: [1, 2, 3]
 ~~~
 
 ## Tests
