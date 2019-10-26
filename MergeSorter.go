@@ -1,8 +1,10 @@
-package merge_sort
+package sort
 
+// MergeSorter can sort elements using "merge sort" algorithm
 type MergeSorter struct {
 }
 
+// Sort uses "merge sort" algorithm to sort integers using recursion
 func (sorter *MergeSorter) Sort(unsortedElements []int) (sortedElements []int) {
 	unsortedElementsLength := len(unsortedElements)
 
@@ -26,6 +28,7 @@ func (sorter *MergeSorter) Sort(unsortedElements []int) (sortedElements []int) {
 	return sorter.merge(sortedFirstHalf, sortedSecondHalf)
 }
 
+// merge two sorted integer slices into one
 func (sorter *MergeSorter) merge(sortedFirstHalf []int, sortedSecondHalf []int) (sortedElements []int) {
 	for len(sortedFirstHalf) > 0 && len(sortedSecondHalf) > 0 {
 		firstElement := sortedFirstHalf[0]
