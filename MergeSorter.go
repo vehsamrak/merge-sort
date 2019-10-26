@@ -25,7 +25,9 @@ func (sorter *MergeSorter) Sort(unsortedElements []int) (sortedElements []int) {
 	sortedFirstHalf := sorter.Sort(firstHalf)
 	sortedSecondHalf := sorter.Sort(secondHalf)
 
-	return sorter.merge(sortedFirstHalf, sortedSecondHalf)
+	sortedElements = sorter.merge(sortedFirstHalf, sortedSecondHalf)
+
+	return
 }
 
 // merge two sorted integer slices into one
